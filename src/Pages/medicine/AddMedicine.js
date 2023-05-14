@@ -58,7 +58,7 @@ const AddMedicine = () => {
                         {/* medicine name */}
 
                         <div className="mb-1  w-full md:w-[50%] mr-0 md:mr-2">
-                            <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Name</label>
+                            <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Name</label>
                             <input
                                 type="text"
                                 id="name"
@@ -74,7 +74,7 @@ const AddMedicine = () => {
                         </div>
                         {/* medicine generic name */}
                         <div className="mb-1 w-full md:w-[50%] ml-0 md:ml-2">
-                            <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Generic Name</label>
+                            <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Generic Name</label>
                             <input
                                 type="text"
 
@@ -93,7 +93,7 @@ const AddMedicine = () => {
                     {/* medicine category */}
 
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Category</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Category</label>
                         <select className="bg-[#F0FDF4] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             {...register("medicineCategory", {
                                 required: "category is required",
@@ -112,7 +112,7 @@ const AddMedicine = () => {
                     {/* medicine image */}
 
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Image</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Image</label>
                         <input className="block w-full text-sm text-gray-900  rounded-lg cursor-pointer bg-[#F0FDF4] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 p-2" id="file_input" type="file"
                             {...register("img", {
                                 required: "Medicne Image is required",
@@ -124,7 +124,7 @@ const AddMedicine = () => {
                     </div>
                     {/* medicine price */}
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Price</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Price</label>
                         <input
                             type="text"
 
@@ -140,7 +140,7 @@ const AddMedicine = () => {
                     </div>
                     {/* medicine description */}
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine description</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine description</label>
                         {/* <textarea
                             rows="5"
                             className="bg-[#F0FDF4] text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-500"
@@ -172,7 +172,7 @@ const AddMedicine = () => {
                     </div>
                     {/* medicine strength */}
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Strength</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Strength</label>
                         <input
                             type="text"
                             className="bg-[#F0FDF4] text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-500"
@@ -188,7 +188,7 @@ const AddMedicine = () => {
                     </div>
                     {/* medicine security code */}
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Security Code</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Security Code</label>
                         <input
                             type="text"
 
@@ -205,7 +205,7 @@ const AddMedicine = () => {
                     </div>
                     {/* medicine stock */}
                     <div className="mb-1">
-                        <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Stock</label>
+                        <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Stock</label>
                         <input
                             type="text"
                             className="bg-[#F0FDF4] text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-500"
@@ -225,7 +225,7 @@ const AddMedicine = () => {
 
                         {/* medicine type */}
                         <div className="mb-1  w-full md:w-[50%] mr-0 md:mr-2">
-                            <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Type</label>
+                            <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white">Medicine Type</label>
                             <select id="condition"
                                 className="bg-[#F0FDF4] text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-500"
                                 {...register("medicineType", {
@@ -246,7 +246,7 @@ const AddMedicine = () => {
                         </div>
                         {/* medicine status */}
                         <div className="mb-1  w-full md:w-[50%] mr-0 md:ml-2">
-                            <label for="repeat-password" class="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Status</label>
+                            <label for="repeat-password" className="block mb-2 text-[13px] font-normal text-gray-900 dark:text-white"> Status</label>
                             <select id="condition"
                                 className="bg-[#F0FDF4] text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-500"
                                 {...register("medicineStatus", {

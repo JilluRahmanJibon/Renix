@@ -109,10 +109,10 @@ const FeatureProducts = () => {
                             >
                                 <div className="w-full  h-64 rounded-xl ">
                                     <div className="flex justify-between items-center ">
-                                        <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+                                        <span className="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
                                             Sold out
                                         </span>
-                                        <span class="bg-green-100 self-end  text-green-800 text-xs font-medium  px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                                        <span className="bg-green-100 self-end  text-green-800 text-xs font-medium  px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
                                             sale !
                                         </span>
                                     </div>

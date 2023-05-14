@@ -39,7 +39,7 @@ const NewsAndMedia = () => {
                             <div className=" m-2">
 
 
-                                <iframe src={info.videoUrl} width="350" height="300" className='border-none overflow-hidden ' scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                <iframe src={info.videoUrl} width="350" height="300" className='border-none overflow-hidden ' scrolling="no" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
                             </div>
                         </div>
 

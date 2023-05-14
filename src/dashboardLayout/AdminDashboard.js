@@ -619,7 +619,7 @@ const AdminDashboard = () => {
                                             <span className="text-2xl text-white lg:text-[#191919] inline-block">
                                                 <IoMdNotificationsOutline />
                                             </span>
-                                            <div class="absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-[#111111c1] bg-firstCol border-2 border-gray-800 rounded-full -top-2 right-1 dark:border-gray-900">5</div>
+                                            <div className="absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-[#111111c1] bg-firstCol border-2 border-gray-800 rounded-full -top-2 right-1 dark:border-gray-900">5</div>
 
                                         </div>
                                         {/* settings icon */}

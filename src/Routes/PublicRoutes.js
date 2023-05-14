@@ -10,6 +10,7 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Products from "../Pages/Products";
 import Refound from "../Pages/Refound";
 import Services from "../Pages/Services";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const PublicRoutes = [
@@ -22,7 +23,7 @@ const PublicRoutes = [
   { path: "/privacy-policy", Component: Privacy },
   { path: "/refound-return", Component: Refound },
   { path: "/terms-conditions", Component: Conditions },
-  { path: "/products/details", Component: ProductDetails },
+  { path: "/products/details", Component: PrivateRoutes, ProductDetails, PrivateRoutes },
   { path: "/Checkout", Component: Checkout },
   
 ];

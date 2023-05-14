@@ -88,10 +88,10 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div class="col-span-3">
+        <div className="col-span-3">
           <div className=" flex gap-6 flex-wrap mx-auto justify-center ">
             {products.map((product) => (
-              <Link to={"/products/details"}>
+              <Link key={product?._id} to={"/products/details"}>
                 <div
                   className="relative w-full"
                   onMouseEnter={() => setDisplayButton(product._id)}
@@ -99,14 +99,14 @@ const Products = () => {
                 >
                   <div
                     className="w-80  px-8 py-4 shadow-md rounded-lg"
-                    key={product._id}
+                   
                   >
                     <div className="w-full  h-64 rounded-xl ">
                       <div className="flex justify-between items-center ">
-                        <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+                        <span className="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
                           Sold out
                         </span>
-                        <span class="bg-green-100 self-end  text-green-800 text-xs font-medium  px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                        <span className="bg-green-100 self-end  text-green-800 text-xs font-medium  px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
                           sale !
                         </span>
                       </div>

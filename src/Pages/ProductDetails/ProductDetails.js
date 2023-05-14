@@ -80,7 +80,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div class="relative overflow-x-auto m-3 mt-8 mb-6">
+      <div className="relative overflow-x-auto m-3 mt-8 mb-6">
         <div>
           <ul className="flex">
             <li

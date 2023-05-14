@@ -10,35 +10,45 @@ import { aboutRoutes } from "./Routes/AboutRoutes";
 import About from "./Pages/About";
 import Profile from "./Pages/AboutUs/Profile";
 import OrderFLoatingCart from "./Layouts/OrderFLoatingCart";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsFillBagFill } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SignIn from "./Pages/Login/SignIn/Signin";
+import SignUp from "./Pages/Login/SignUp/Signup";
+import PrivateRoutes from "./Routes/PrivateRoutes";
+import { AuthContext } from "./Contexts/AuthProvider/AuthProvider";
 
 function App() {
   const [openCart, setOpenCart] = useState(false);
+  const {user}=useContext(AuthContext)
   return (
     <div className="relative">
-      {openCart ? (
-        <OrderFLoatingCart setOpenCart={setOpenCart}></OrderFLoatingCart>
-      ) : (
-        <div className="fixed z-20 top-[45vh] right-0 cursor-pointer">
-          {" "}
-          <div
-            onClick={() => setOpenCart(true)}
-            className="bg-primary rounded-l-lg"
-          >
-            <div className="flex flex-col justify-center items-center text-white">
-              <div className="flex flex-col justify-center items-center py-2 ">
-                {" "}
-                <BsFillBagFill className="text-2xl "></BsFillBagFill>
-                <p className="pt-2 text-xs">0 item</p>
+      {
+        user?.email && <>
+          {openCart ? (
+            <OrderFLoatingCart setOpenCart={setOpenCart}></OrderFLoatingCart>
+          ) : (
+
+            <div className="fixed z-20 top-[45vh] right-0 cursor-pointer">
+              {" "}
+              <div
+                onClick={() => setOpenCart(true)}
+                className="bg-primary rounded-l-lg"
+              >
+                <div className="flex flex-col justify-center items-center text-white">
+                  <div className="flex flex-col justify-center items-center py-2 ">
+                    {" "}
+                    <BsFillBagFill className="text-2xl "></BsFillBagFill>
+                    <p className="pt-2 text-xs">0 item</p>
+                  </div>
+                  <p className="bg-secondary rounded-bl-lg p-2 text-xs">500 tk</p>
+                </div>
               </div>
-              <p className="bg-secondary rounded-bl-lg p-2 text-xs">500 tk</p>
             </div>
-          </div>
-        </div>
-      )}
+          )}
+        </>
+     }
 
       <Routes>
         {/* main Routes */}
@@ -46,6 +56,12 @@ function App() {
           {PublicRoutes.map(({ path, Component }, index) => (
             <Route key={index + 45} path={path} element={<Component />} />
           ))}
+        </Route>
+
+        {/* login and sign up */}
+        <Route path="/signin" element={<SignIn />}>
+        </Route>
+        <Route path="/signup" element={<SignUp />}>
         </Route>
 
         {/* dashboard routes */}
@@ -61,6 +77,8 @@ function App() {
             <Route key={index} path={path} element={<Component />} />
           ))}
         </Route>
+
+
       </Routes>
 
       <Toaster />

@@ -20,7 +20,7 @@ const HealthCareProducts = () => {
             </button>
           </div>
           <div className="self-center  lg:w-1/4">
-            <img className=" " src={medicine} alt="" srcset="" />
+            <img className=" " src={medicine} alt="" srcSet="" />
           </div>
         </div>
         <div className="bg-primary rounded-3xl flex justify-center items-center md:p-4 md:w-1/2 lg:w-1/3">
@@ -47,14 +47,14 @@ const HealthCareProducts = () => {
               className="w-1/2 mx-auto md:w-2/4"
               src={healthProduct2}
               alt=""
-              srcset=""
+              srcSet=""
             />
           </div>
         </div>
         <div className="bg-secondary text-primary rounded-3xl p-8  w-full md:w-1/2 lg:w-1/3">
           <h1 className=" text-3xl ">Trusted Brands</h1>
           <p className="md:my-2">
-          Renix Unani Laboratories Limited is a trusted brand dedicated to producing high-quality, natural medicine that is effective in treating illnesses without harmful side effects. 
+            Renix Unani Laboratories Limited is a trusted brand dedicated to producing high-quality, natural medicine that is effective in treating illnesses without harmful side effects.
           </p>
           <div className=" ml-9 mt-4 ">
             <ul className="list-disc ">
