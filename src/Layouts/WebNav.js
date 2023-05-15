@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../Assets/images/logo.svg";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import './WebNav.css';
 import TopBar from './TopBar';
+import { FaUserCircle } from 'react-icons/fa';
+import { AuthContext } from '../Contexts/AuthProvider/AuthProvider';
 
 
 const WebNav = () => {
-
+    const { user, userLogOut }=useContext(AuthContext)
     //sticky nav
     const [stickyNav, setStickyNav] = useState(false);
 
@@ -271,6 +273,10 @@ const WebNav = () => {
 
                 {/* call to action button */}
                 <Link to={"/"}><button className='hidden lg:flex items-center px-2  py-2 rounded text-white border bg-primary border-primary text-base'>Appoinments +</button></Link>
+                <div className='text-black'>
+                    {/* <FaUserCircle /> */}
+                    {user?.email ? <button className='text-primary' onClick={() => userLogOut()}>Log out</button> : <Link to={"/signin"}><button className='hidden lg:flex items-center px-4  py-2 rounded text-primary border border-primary text-base'>Login</button></Link>}
+                </div>
             </nav>
         </header>
 

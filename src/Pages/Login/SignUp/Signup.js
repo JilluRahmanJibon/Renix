@@ -38,18 +38,18 @@ const SignUp = () => {
 			.then(result => {
 				setLoading(true);
 				const user = result.user;
+				console.log(user);
 				const currentUser = {
 					email: user.email,
 				};
 
-				fetch(" https://food-masty-server.vercel.app/jwt", {
+				fetch(`http://localhost:5000/users`, {
 					method: "POST",
 					headers: { "content-type": "application/json" },
 					body: JSON.stringify(currentUser),
 				})
 					.then(res => res.json())
 					.then(data => {
-						localStorage.setItem("recipe-token", data.token);
 						navigate(from, { replace: true });
 						Swal.fire({
 							position: "top-center",
@@ -78,17 +78,17 @@ const SignUp = () => {
 			.then(result => {
 				userProfileUpdate(name);
 				const user = result.user;
+				console.log(user);
 				const currentUser = {
 					email: user.email,
 				};
-				fetch(" https://food-masty-server.vercel.app/jwt", {
+				fetch(`http://localhost:5000/users`, {
 					method: "POST",
 					headers: { "content-type": "application/json" },
 					body: JSON.stringify(currentUser),
 				})
 					.then(res => res.json())
 					.then(data => {
-						localStorage.setItem("recipe-token", data.token);
 						navigate(from, { replace: true });
 						Swal.fire({
 							position: "top-center",

@@ -36,11 +36,13 @@ const SignIn = () => {
 			.then(result => {
 				setLoading(true);
 				const user = result.user;
+				console.log(user);
+
 				const currentUser = {
 					email: user.email,
 				};
 
-				fetch(" https://food-masty-server.vercel.app/jwt", {
+				fetch(`http://localhost:5000/users`, {
 					method: "POST",
 					headers: {
 						"content-type": "application/json",
@@ -49,7 +51,6 @@ const SignIn = () => {
 				})
 					.then(res => res.json())
 					.then(data => {
-						localStorage.setItem("recipe-token", data.token);
 						navigate(from, { replace: true });
 						Swal.fire({
 							position: "top-center",
@@ -72,18 +73,18 @@ const SignIn = () => {
 		continueWithGoogle()
 			.then(result => {
 				const user = result.user;
+				console.log(user);
 
 				const currentUser = {
 					email: user.email,
 				};
-				fetch(" https://food-masty-server.vercel.app/jwt", {
+				fetch(`http://localhost:5000/users`, {
 					method: "POST",
 					headers: { "content-type": "application/json" },
 					body: JSON.stringify(currentUser),
 				})
 					.then(res => res.json())
 					.then(data => {
-						localStorage.setItem("recipe-token", data.token);
 						navigate(from, { replace: true });
 						Swal.fire({
 							position: "top-center",
@@ -133,7 +134,7 @@ const SignIn = () => {
 						)}
 						<div className="p-6 space-y-4 md:space-y-6 ">
 							<h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-							Renix Account Login
+								Renix Account Login
 							</h1>
 
 							<form
